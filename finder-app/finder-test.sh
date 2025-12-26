@@ -71,3 +71,6 @@ else
 	echo "failed: expected  ${MATCHSTR} in ${OUTPUTSTRING} but instead found"
 	exit 1
 fi
+
+# Al final del script
+echo "Final result" > /tmp/assignment4-result.txt
