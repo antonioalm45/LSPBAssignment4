@@ -26,7 +26,8 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin/
 	$(INSTALL) -d $(TARGET_DIR)/usr/bin/conf/
 	$(INSTALL) -m 0644 $(@D)/conf/* $(TARGET_DIR)/usr/bin/conf/
-
+	$(INSTALL) -m 0755 $(@D)/server/aesdsocket $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/
 	# 2. Copiamos TODO a /root de forma que no falle
 	#$(INSTALL) -d $(TARGET_DIR)/root/
 	#cp -rn $(@D)/* $(TARGET_DIR)/root/
